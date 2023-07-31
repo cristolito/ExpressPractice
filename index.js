@@ -12,6 +12,10 @@ app.get('/about', (req, res) => {
     res.send('About')
 })
 
+app.get('/{user}', (req, res) => {
+    res.send('Hello ' + req.user)
+})
+
 app.use((req,res)=>{
     res.status(404).send('<h1>Tu página no existe</h1>')
 })
